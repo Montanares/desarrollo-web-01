@@ -1,6 +1,14 @@
-const DisplayData = () => {
+interface DisplayDataProps {
+    users:any[]
+}
+const DisplayData = (props:DisplayDataProps) => {
     return (
-        <p>Hola soy un display data</p>
+        <div className="card">
+            <div className="card-body">
+            {JSON.stringify(props.users, undefined, 2)}
+            </div>
+        </div>
+        
     )
 }
 
